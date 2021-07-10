@@ -1,0 +1,47 @@
+Exercice 1
+Input
+def multiply_list(items):
+    tot = 1
+    for x in items:
+        tot *= x
+    return tot
+print(multiply_list([2,3,6]))
+Output
+36
+
+Exercice 2
+Input
+def last(n): return n[-1]
+
+def sort_list_last(tuples):
+  return sorted(tuples, key=last)
+
+print(sort_list_last([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
+Output
+[(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+
+Exercice 3
+Input
+from collections import Counter
+d1 = {'a': 100, 'b': 200, 'c':300}
+d2 = {'a': 300, 'b': 200, 'd':400}
+d = Counter(d1) + Counter(d2)
+print(d)
+Output
+Counter({'a': 400, 'b': 400, 'd': 400, 'c': 300})
+
+Exercice 4
+Input
+n = int(input("Enter the value of n:"))
+squares = {i : i*i for i in range(1, n+1)}
+print(squares)
+Output
+Enter the value of n:8
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+
+Exercice 5
+Input
+price = [('item1', '12.20'), ('item2', '15.10'), ('item3', '24.5')]
+print( sorted(price, key=lambda x: float(x[1]), reverse=True))
+Output
+[('item3', '24.5'), ('item2', '15.10'), ('item1', '12.20')]
